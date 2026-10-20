@@ -1,7 +1,5 @@
-import './index.css'
-
-const App = () => {
-  return <div className="App"></div>
+const Authentication = () => {
+  return <div>Authentication</div>
 }
 
-export default App
+export default Authentication
