@@ -23,7 +23,7 @@ const Register = ({ username, password, setUsername, setPassword }) => {
         setValue={setPassword}
         icon={faKey}
       />
-      <Button label="Sign Up" className="auth-submit" onClick={() => {}} />
+      <Button label="Sign Up" className="auth-submit" type="submit" onClick={() => {}} />
     </div>
   )
 }

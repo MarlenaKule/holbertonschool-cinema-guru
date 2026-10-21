@@ -23,7 +23,7 @@ const Login = ({ username, password, setUsername, setPassword }) => {
         setValue={setPassword}
         icon={faKey}
       />
-      <Button label="Sign In" className="auth-submit" onClick={() => {}} />
+         <Button label="Sign In" className="auth-submit" type="submit" onClick={() => {}} />
     </div>
   )
 }
