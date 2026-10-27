@@ -11,6 +11,11 @@ const App = () => {
   useEffect(() => {
     const accessToken = localStorage.getItem('accessToken')
 
+    // Shtojmë këtë kontroll: Nëse nuk ka token, nuk bëjmë kërkesë fare!
+    if (!accessToken) {
+      return; 
+    }
+
     axios
       .post(
         'http://localhost:8000/api/auth/',
@@ -27,6 +32,8 @@ const App = () => {
       })
       .catch((error) => {
         console.log(error)
+        // Nëse token-i skadon ose është i pavlefshëm, e fshijmë që të mos bllokohet faqja
+        localStorage.removeItem('accessToken');
       })
   }, [])
 

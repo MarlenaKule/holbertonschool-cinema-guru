@@ -23,7 +23,8 @@ const Authentication = ({ setIsLoggedIn, setUserUsername }) => {
         setIsLoggedIn(true)
       })
       .catch((error) => {
-        console.log(error)
+        console.log('STATUS:', error.response?.status)
+        console.log('MESSAGE:', error.response?.data)
       })
   }
 
